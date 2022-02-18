@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>practice day</title>
+</head>
+<body>
+    <header>
+
+        <nav class="navbar">
+            <div class="navbar-brand"><a href="#">FS</a></div>
+                <ul class="nav-item">
+                    <li class="nav-link"> <a href="#">HOME</a> </li>                  
+                    <li class="nav-link"> <a href="#">ABOUT</a> </li>
+                    <li class="nav-link"><a href="#">CONTACT</a> </li>
+                </ul>
+            <div class="hamberger"><img src="./p/icons8-menu-50.png" alt=""></div>
+        </nav>
+    </header>
+
+<script>
+
+
+const navbarNav=document.querySelector('.nav-item');
+    const hamberger= document.querySelector('.hamberger');
+    hamberger.addEventListener("click", () => {
+        hamberger.classList.toggle("active");
+        navbarNav.classList.toggle("active");
+    })
+    document.querySelectorAll(".nav-link").forEach(n=>n.addEventListener("click", ()=>{
+        hamberger.classList.remove("active");
+        navbarNav.classList.remove("active");
+    }))
+
+</script>
+
+</body>
+</html>
